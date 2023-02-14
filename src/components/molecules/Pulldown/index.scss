@@ -1,0 +1,193 @@
+.m-pulldown {
+    $root: &;
+    width: 100%;
+    
+    &_wrap {
+        min-height: rem(46);
+        position: relative;
+        @include mobile-down {
+            min-height: rem(44);
+        }
+
+        &::after {
+            color: #f00;
+            content: ' *';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
+ 
+    &_label {
+        background-color: $white;
+        left: rem(26);
+        padding: 0 rem(3);
+        position: absolute;
+        top: rem(-15);
+    }
+
+    &_container {
+        $container: &;
+        background: $white;
+        border: rem(1) solid #e0e3eb;
+        border-radius: rem(2);
+        box-shadow: none;
+        cursor: pointer;
+        left: 0;
+        padding: rem(12) rem(42) rem(12) rem(20);
+        position: absolute;
+        top: 0;
+        transition: 0.3s linear;
+        width: 100%;
+        z-index: 1;
+
+   
+
+        @include mobile-down {
+            border-radius: rem(20);
+            padding-left: rem(12);
+        }
+
+        &-open {
+            border: rem(1)solid #e0e3eb;
+            border-radius: rem(2);
+            //   border: 1px solid transparent;
+            //   box-shadow: 0 0 5px 5px rgba($color: $black, $alpha: 0.03);
+            padding-right: rem(12);
+            z-index: 9;
+
+            #{$container}_arrow {
+                opacity: 0;
+            }
+        }
+
+        &-disabled {
+            cursor: initial;
+        }
+
+
+        &-secondary {
+            border-color: rgba(#808080, 0.25);
+            
+            #{$container}_title {
+                color: #a3aac2;
+                @include font-base(12, 16);
+            }
+
+            #{$container}_title-placeholder {
+                color: #808080;
+            }
+
+            #{$container}_arrow {
+                background-color: transparent;
+                // background-image: url('~assets/icons/ic_arrow_down_gray.svg');
+                transform: rotate(0);
+            }
+        }
+
+        @include mobile-down {
+            border-radius: rem(20);
+            padding-left: rem(12);
+        }
+
+        &-menu {
+            &-item {
+     
+                color: rgba($color: #a3aac2
+                , $alpha: 0.5);
+                height: 0;
+                overflow: hidden;
+                -ms-overflow-style: none;
+                /* IE and Edge */
+                scrollbar-width: none;
+                transition: 0.3s;
+                @include adjust-flex(flex-start, center);
+                @include font-base(12, 16);
+
+                &:hover {
+                    color: #8a2be2;
+                }
+
+                // @include mobile-down {
+                //   @include font-base(14, 18);
+                // }
+
+                #{$container}-open & {
+                    height: rem(46);
+                    overflow: auto;
+
+                    @include mobile-down {
+                        height: rem(40);
+                    }
+                }
+
+                // hide scroll bar
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                /* Firefox */
+            }
+        }
+
+        &_title {
+            color: #a3aac2;
+            min-height: rem(20);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            @include font-base(12, 16);
+
+            // @include mobile-down {
+            //   @include font-base(14, 18);
+            //   min-height: rem(18);
+            // }
+
+            &-placeholder {
+                color: #a3aac2;
+            }
+
+            #{$container}-open & {
+                padding-bottom: rem(13);
+            }
+        }
+
+        &_arrow {
+            //   background-color: $vivid-cerulean;
+            //   background-image: url('~assets/icons/ic_arrow_down_white.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 35% 35%;
+            border-radius: 50%;
+            height: rem(37);
+            opacity: 1;
+            position: absolute;
+            right: rem(5);
+            top: rem(4);
+            transform: rotate(90deg);
+            transition: 0.3s;
+            width: rem(37);
+
+            @include mobile-down {
+                background-size: 30% 30%;
+                height: rem(30);
+                top: rem(5);
+                width: rem(30);
+            }
+
+
+        }
+
+    }
+
+    &-error {
+        #{$root}_container {
+            border-color: $electric-crimson;
+        }
+
+        #{$root}_container_title-placeholder {
+            color: $electric-crimson;
+        }
+    }
+}

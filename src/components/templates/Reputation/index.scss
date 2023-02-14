@@ -1,0 +1,18 @@
+/* stylelint-disable indentation */
+.t-reputation {
+    &-title {
+        margin-bottom: rem(20);
+    }
+
+    &-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-card {
+        cursor: pointer;
+        margin-bottom: rem(16);
+        width: calc(30 / 100 * 100%);
+    }
+}

@@ -1,0 +1,25 @@
+/* stylelint-disable indentation */
+.o-header {
+    &-wrapper {
+
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+    
+    &-logo {
+        // display: block;
+        width: 114px;
+    }
+
+    &-nav {
+        @include adjust-flex();
+
+        .m-tabHeader {
+            cursor: pointer;
+            margin-right: 8px;
+        }
+    }
+}

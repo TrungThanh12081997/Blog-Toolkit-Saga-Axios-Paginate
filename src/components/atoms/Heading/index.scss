@@ -1,0 +1,38 @@
+/* stylelint-disable indentation */
+.a-heading {
+    display: block;
+    // font-family: $font-svn;
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+    @include break-min(1025px) {
+        @include text-overflow();
+    }
+
+    &-20x28 {
+        @include font-base(20, 28);
+    }
+
+    &-24x32 {
+        @include font-base(24,32);
+        @include break-max(1600px) {
+            @include font-base(18,28);
+        }
+
+        @include tablet-down {
+            @include font-base(16,24);
+        }
+    }
+
+    &-14x16 {
+         @include font-base(14,16);
+    }
+
+ &-16x20 {
+         @include font-base(16,20);
+    }
+    @include style-color;
+    @include style-general;
+    @include style-font-weight;
+    // @include style-font;
+}

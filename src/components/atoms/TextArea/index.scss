@@ -1,0 +1,48 @@
+.a-textarea {
+    $root: &;
+
+    &_label {
+        margin-bottom: rem(6);
+    }
+
+    &_inputele {
+        border: 1px solid #e0e3eb;
+        border-radius: rem(2);
+        // border: 1px solid #808080;
+        // border-radius: rem(25);
+        color: #a3aac2;
+        font-family: inherit;
+        margin: 0;
+        outline: none;
+        padding: rem(13) rem(20);
+        resize: none;
+        transition: all $transition linear;
+        width: 100%;
+        @include font-base(14, 16);
+
+        &::placeholder {
+            color: #808080;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    }
+
+    &-error {
+        #{$root}_label {
+            .a-paragraph-text {
+                color: $electric-crimson;
+            }
+        }
+        #{$root}_inputele {
+            border-color: $electric-crimson;
+            color: $electric-crimson;
+        
+            &::placeholder {
+                color: $electric-crimson;
+            }
+        }
+    }
+}

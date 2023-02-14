@@ -1,0 +1,35 @@
+$themes: (
+    primary: (
+        darkMode: $black,
+        lightMode: $white,
+    ),
+    text: (
+        darkMode: $white,
+        lightMode: $black,
+    ),
+);
+
+@mixin theme-mode($mode) {
+    @each $key, $map in $themes {
+        @each $prop, $color in $map {
+            @if $prop == $mode {
+                --#{$key}: #{$color};
+            }
+        }
+    }
+}
+
+body:is(.darkMode) {
+    @include theme-mode('darkMode');
+}
+
+body:not(.darkMode) {
+    @include theme-mode('lightMode');
+}
+$offsets: (top, bottom, left, right);
+$breakpoints: (
+    sm: '(min-width: 576px)',
+    md: '(min-width: 768px)',
+    lg: '(min-width: 992px)',
+    xl: '(min-width: 1200px)',
+);

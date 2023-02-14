@@ -1,0 +1,19 @@
+/* stylelint-disable indentation */
+.t-aboutTemplate {
+    .container {
+        position: relative;
+
+    }
+
+    &-bg {
+        max-width: calc(450/ (362 + 195)  * 100%);
+    }
+
+    &-content {
+        max-width: rem(250);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

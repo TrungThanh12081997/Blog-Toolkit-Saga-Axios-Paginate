@@ -1,0 +1,24 @@
+/* stylelint-disable indentation */
+.m-aboutCard {
+    background-color: $curulean-blue;
+    border-radius: 0.802774px;
+    box-shadow: 0 8.02774px 9.63329px -1.60555px rgba(17, 24, 39, 0.1),
+        0 3.2111px 3.2111px -1.60555px rgba(17, 24, 39, 0.04);
+    padding: rem(25);
+
+    &-title {
+        margin-bottom: rem(16);
+    }
+
+    &-description {
+        margin-bottom: rem(32);
+    }
+
+    &-button {
+        width: max-content;
+
+        .a-button {
+            padding: rem(8);
+        }
+    }
+}

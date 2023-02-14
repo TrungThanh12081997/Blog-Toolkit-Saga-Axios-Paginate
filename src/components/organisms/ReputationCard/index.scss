@@ -1,0 +1,43 @@
+/* stylelint-disable indentation */
+.o-card {
+    $root: &;
+    border: rem(1) solid #e0e3eb;
+    border-radius: rem(2);
+    padding: rem(8);
+
+    &-img,
+    &-title,
+    &-description {
+        margin-bottom: rem(8);
+    }
+
+    &-blue {
+        background: $curulean-blue;
+
+        .a-heading {
+            color: $white;
+        }
+    }
+
+    &-white {
+        background: $white;
+
+        .a-heading {
+            color: $curulean-blue;
+        }
+    }
+
+    &-white,
+    &-blue {
+        border-radius: rem(2);
+        padding-bottom: rem(16);
+        padding-top: rem(16);
+        #{$root}-img {
+            @include adjust-flex();
+        }
+
+        .a-heading {
+            text-align: center;
+        }
+    }
+}

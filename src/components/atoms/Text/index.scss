@@ -1,0 +1,82 @@
+/* stylelint-disable indentation */
+.a-text {
+    $root: &;
+    // font-family: $font-roboto;
+    @include style-color();
+    @include style-general();
+    @include style-font-weight();
+    // @include style-font();
+
+    &-10x12 {
+        @include font-base(10,12);
+    }
+
+    &-12x18 {
+        @include font-base(12,18);
+    }
+
+    &-12x16-pk3 {
+        @include font-base(12,16);
+    }
+
+    &-14x22 {
+        @include font-base(14,22);
+    }
+
+    &-14x20 {
+        @include font-base(14,20);
+    }
+
+  &-14x16 {
+        @include font-base(14,16);
+    }
+
+    &-16x24 {
+        @include font-base(16,24);
+        @include break-max(1600px) {
+            @include font-base(14, 20);
+        }
+    }
+
+    &-16x20 {
+        @include font-base(16,20);
+        @include break-max(1600px) {
+            @include font-base(14, 18);
+        }
+    }
+
+    &-20x25 {
+        @include font-base(20,25);
+        @include mobile-down {
+            @include font-base(18,24);
+        }
+    }
+
+    &-20x32 {
+        @include font-base(20,32);
+
+        @include max-desktop-down {
+            @include font-base(16,24);
+        }
+
+        @include mobile-down {
+            @include font-base(14,22);
+        }
+    }
+
+    &-24x32 {
+        @include font-base(24,32);
+        @include max-desktop-down {
+            @include font-base(20,28);
+        }
+
+        @include mobile-down {
+            @include font-base(16,24);
+        }
+    }
+
+    &-8x8 {
+          @include font-base(8,8);
+    }
+
+}

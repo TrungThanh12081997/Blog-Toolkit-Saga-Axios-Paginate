@@ -1,0 +1,28 @@
+/* stylelint-disable indentation */
+.o-formRegister {
+    &_inputWrapp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: rem(12);
+
+        .a-textarea {
+            // outline: none;
+            width: 100%;
+        }
+    }
+
+    &_inputField {
+        width: 44%;
+    }
+
+    &_button {
+        margin: 0 auto;
+        max-width: 40%;
+    }
+
+    &_description {
+        margin-bottom: rem(16);
+         margin-top: rem(16);
+    }
+}

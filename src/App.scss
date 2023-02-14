@@ -1,0 +1,9 @@
+@import 'styles';
+
+@import 'components/atoms/*/index.scss';
+@import 'components/molecules/*/index.scss';
+@import 'components/organisms/*/index.scss';
+@import 'components/templates/*/index.scss';
+@import 'pages/*/index.scss';
+
+@import '~bootstrap/scss/bootstrap';

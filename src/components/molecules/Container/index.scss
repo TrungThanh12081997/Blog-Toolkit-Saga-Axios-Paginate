@@ -1,0 +1,21 @@
+/* stylelint-disable indentation */
+.o-container {
+    transition: $transition ease-in-out;
+
+    &-default {
+        @include container();
+    }
+
+    &-noPaddingRight {
+        padding-right: 0;
+    }
+  
+    &-noPaddingLeft {
+        padding-left: 0;
+    }
+  
+    &-fullScreen {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

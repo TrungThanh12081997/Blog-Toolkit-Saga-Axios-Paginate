@@ -1,0 +1,13 @@
+.t-BlogTemplate {
+    &_navigate {
+
+        border: rem(3) solid $black;
+    }
+
+    &_comment {
+        border-radius: 50%;
+        height: rem(32);
+        overflow: hidden;
+        width: rem(32);
+    }
+}
